@@ -16,7 +16,7 @@ const ShowJobs = () => {
  const navigate=useNavigate();
 
   useEffect(()=>{
-   fetch(`http://localhost:3001/api/v1/work`)
+   fetch(`https://daily-wager.onrender.com/api/v1/work`)
    .then(response=>response.json())
    .then(json=>{
       setDa(da.concat(json.data));
@@ -30,7 +30,7 @@ const ShowJobs = () => {
     if(a==null){
       setLogin(true)
      }
-           const response=await fetch('http://localhost:3001/api/v1/book',{
+           const response=await fetch('https://daily-wager.onrender.com/api/v1/book',{
               method:'POST',
               body:JSON.stringify({
                 bookingUserId:a,
@@ -42,17 +42,16 @@ const ShowJobs = () => {
             }
            })
            const json=await response.json();
-           console.log(json.data);
+           console.log(json);
   }
   const booked=(e)=>{
      const id=e.target.id;
-     fetch(`http://localhost:3001/api/v1/work/${id}`)
+     fetch(`https://daily-wager.onrender.com/api/v1/work/${id}`)
    .then(response=>response.json())
    .then(json=>{
     b=json.data
     console.log(b);
     userBookWork();
-    alert('Work has been booked')
     })
   }
 

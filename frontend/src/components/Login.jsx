@@ -10,7 +10,7 @@ const Login = () => {
   });
   
   const loginFun=async()=>{
-    const response=await fetch('http://localhost:3001/api/v1/user/signin',{
+    const response=await fetch('https://daily-wager.onrender.com/api/v1/user/signin',{
       method:'POST',
       body:JSON.stringify({
         mobileNumber:user.number,

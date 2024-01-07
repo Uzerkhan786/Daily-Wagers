@@ -25,7 +25,7 @@ const CreateJob = () => {
       }
       e.preventDefault();
       setLoad(true)
-      const response=await fetch('http://localhost:3001/api/v1/work',{
+      const response=await fetch('https://daily-wager.onrender.com/api/v1/work',{
             method:'POST',
             body: JSON.stringify({
             userId:a,

@@ -11,7 +11,7 @@ const Registration = () => {
   });
 
   const registerFun=async()=>{
-    const response=await fetch('http://localhost:3001/api/v1/user/signup',{
+    const response=await fetch('https://daily-wager.onrender.com/api/v1/user/signup',{
       method:'POST',
       body:JSON.stringify({
         name:user.name,

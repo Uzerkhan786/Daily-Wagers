@@ -5,17 +5,16 @@ const AppliedJob = () => {
     useEffect(()=>{
       
       const bookUser= localStorage.getItem('userId')
-    fetch(`http://localhost:3001/api/v1/book/?bookingUserId=${bookUser}`)
+    fetch(`https://daily-wager.onrender.com/api/v1/book/?bookingUserId=${bookUser}`)
    .then(response=>response.json())
    .then(json=>{
       setBook(book.concat(json.data));
    })
-   
     },[])
     console.log(book);
     const deleteBooking=(e)=>{
       const id=e.target.value;
-       fetch(`http://localhost:3001/api/v1/book/${id}`,{
+       fetch(`https://daily-wager.onrender.com/api/v1/book/${id}`,{
         method:'DELETE'
        })
        .then(data=>data.json())
