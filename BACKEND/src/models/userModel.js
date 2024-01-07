@@ -11,6 +11,11 @@ const userSchema=new mongoose.Schema({
      password:{
         type:String,    
      },
+     role:{
+      type:String,
+      enum:['ADMIN','CUSTOMER'],
+      default:'CUSTOMER'
+   },
      workBooking:[{
       type:mongoose.Schema.Types.ObjectId,
       ref:'Work'
