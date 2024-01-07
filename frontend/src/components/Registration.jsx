@@ -7,7 +7,6 @@ const Registration = () => {
     name:'',
     number:'',
     password:'',
-    role:''
   });
 
   const registerFun=async()=>{
@@ -62,10 +61,7 @@ const Registration = () => {
     <input type="password" className="form-control" id="password" onChange={change} placeholder="Password" autoComplete='off'/>
   </div>
 
-  <div className="form-group my-3">
-    <label htmlFor="password">Role</label>
-    <input type="password" className="form-control" id="role" onChange={change} placeholder="Role"/>
-  </div>
+
 
   <input  type="submit" className="form-control" value={'REGISTER'}
    style={{backgroundColor:'#5856d7',color:'white'}}/> 
