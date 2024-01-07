@@ -26,6 +26,7 @@ const AppliedJob = () => {
         setBook(dltItem)
        })
       console.log('job deleted');
+      alert('work deleted successfully')
     }
    
   return (

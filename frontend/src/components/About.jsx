@@ -7,7 +7,7 @@ const About = () => {
     
       <div className="container">
   <div className="row" style={{paddingTop:'2rem'}}>
-  <h1 className='text-center' style={{fontSize:'3.5rem'}}>About Us</h1>
+  <h1 className='text-center' style={{fontSize:'3.5rem',fontWeight:'bold',color:'#5856d7'}}>About Us</h1>
     <div className="col" style={{paddingTop:'2rem'}}>
       <p> Welcome to <span style={{color:'#5856d7',fontFamily:'sans-serif',fontSize:'1.5rem',fontWeight:'bold'}}> 
      Daily Wagers  </span>your go-to platform for seamless daily services availability! At Daily

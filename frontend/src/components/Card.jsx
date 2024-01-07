@@ -37,7 +37,7 @@ const Card = ({jobName,jobType,des,status,location,date,mobile,exp,price,Book}) 
      </div>
      <div className="row">
       <div className="col-6">
-      <p style={{fontWeight:'bold'}}><BsPersonWorkspace style={{color:'#5856d7'}} /> {exp}years</p>
+      <p style={{fontWeight:'bold'}}><BsPersonWorkspace style={{color:'#5856d7'}} /> {exp} years</p>
       </div>
       <div className="col-6">
       <p style={{fontWeight:'bold'}}><BsCalendar2DateFill style={{color:'#5856d7'}}/> {date}</p>

@@ -52,7 +52,7 @@ const ShowJobs = () => {
     b=json.data
     console.log(b);
     userBookWork();
-    alert('Work has been booked')
+    alert('Booked Successfully')
     })
   }
 
