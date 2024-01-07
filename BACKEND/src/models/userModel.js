@@ -16,9 +16,6 @@ const userSchema=new mongoose.Schema({
         enum:['ADMIN','CUSTOMER'],
         default:'CUSTOMER'
      },
-     city:{
-      type:String,
-     },
      workBooking:[{
       type:mongoose.Schema.Types.ObjectId,
       ref:'Work'

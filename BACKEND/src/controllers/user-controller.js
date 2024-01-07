@@ -2,9 +2,10 @@ const{userServices}=require('../services/index');
 const userService=new userServices();
 const createUserController=async(req,res)=>{
     try {
+       
         const check=await userService.getEmailVerify(req.body);
         const user=await userService.createUser(req.body);
-      
+       console.log(user);
         res.json({
             data:user,
             message:'successfully created the user',
@@ -83,6 +84,7 @@ const deleteUserController=async(req,res)=>{
 const getUserController=async(req,res)=>{
     try {
         const user=await userService.getUser(req.params.id);
+        console.log(user);
         res.json({
             data:user,
             message:'successfully get the user',

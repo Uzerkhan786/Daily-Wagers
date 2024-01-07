@@ -1,5 +1,7 @@
 const mongoose=require('mongoose');
-
+var today = new Date();
+var date = today.getDate()+'/'+today.getMonth()+1+'/'+today.getFullYear();
+console.log(date);
 const workSchema=new mongoose.Schema({
     
     userId:{
@@ -13,33 +15,40 @@ const workSchema=new mongoose.Schema({
         required:true
     },
     workName:{
-        type:String
+        type:String,
+        default:'Programmer'
     },
     description:{
         type:String,
+        default:'coding with c++'
     },
     salary:{
         type:Number,
         default:200
     },
     date:{
-        type:Date,
-        default:Date.now
+        type:String,
+        default:date
     },
     city:{
         type:String,
+        required:true,
         default:'bhopal',
-        required:true
     },
     experience:{
         type:String,
         default:'1'
     },
-    available:{
+    mobileNumber:{
+        type:Number,
+        required:true,
+        default:9770353390
+    },
+    status:{
         type:String,
-        enum:['available','not available,busy'],
+        enum:['available','busy'],
         default:'available'
-    }
+    },
 
 })
 const work=mongoose.model('Work',workSchema);

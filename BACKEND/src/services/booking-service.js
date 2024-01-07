@@ -6,20 +6,24 @@ class bookingServices{
         try {
             const responseUser=await userModel.findById(data.bookingUserId).populate({path:'workBooking'});
             const responseWork=await workModel.findById(data.workBookId);
-            const user=await bookingModel.create({...data,price:responseWork.salary});
-            responseUser.workBooking.push(responseWork);
-            responseUser.save();
-            console.log(responseUser);
+            //const user=await bookingModel.create({...data,price:responseWork.salary});
+            const user=(await bookingModel.create({...data,workBookDetail:responseWork})).populate({path:'workBookDetail'});
+            // responseUser.workBooking.push(responseWork);
+            // responseUser.save();
+            // console.log(responseUser);
             
-            const updateWork=await workModel.findByIdAndUpdate(responseWork._id,{
-                available:'not available,busy'
-            })
-            console.log(updateWork);
+            // const updateWork=await workModel.findByIdAndUpdate(responseWork._id,{
+            //     available:'not available,busy'
+            // })
+            // console.log(updateWork);
+            
+            // return user
+            // if(responseUser.role=='CUSTOMER'){
+            //      console.log(responseWork);
+            // }
+
             
             return user
-            if(responseUser.role=='CUSTOMER'){
-                 console.log(responseWork);
-            }
         } catch (error) {
             throw {error:'Unable to book the work service'}
         }
@@ -53,7 +57,7 @@ class bookingServices{
 
     async getAllBookingService(data){
         try {
-            const book=await bookingModel.find(data);
+            const book=await bookingModel.find(data).populate({path:'workBookDetail'});
             return book;
         } catch (error) {
             throw{error:'Something went wrong in the get all booking service,please try again'}

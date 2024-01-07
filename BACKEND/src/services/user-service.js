@@ -21,12 +21,14 @@ class userServices{
        }
        async getEmailVerify(data){
         try {
+            
             const user=await userModel.findOne({mobileNumber:data.mobileNumber});
-            console.log(user.mobileNumber, data.mobileNumber);
-            if(user.mobileNumber==data.mobileNumber){
+            console.log(user);
+            if(user!==null){
                     console.log('Mobile number is already there,please sign in');
                      throw {error:'mobile number is already registered for this user'}
             }
+            console.log('bhai');    
             return true;
         } catch (error) {
             throw {error:'Unable to get the thing'}
@@ -56,7 +58,7 @@ class userServices{
 
        async getUser(data){
         try {
-            const user=await userModel.findById(data)    
+            const user=await userModel.findById(data).populate({path:'workBooking'})    
             return user;
         } catch (error) {
             throw{error:'Something went wrong in the services,Unable to get a user'}

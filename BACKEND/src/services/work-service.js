@@ -5,7 +5,7 @@ class workServices{
         try {
             const  user=await userModel.findById(data.userId);
            console.log(user);
-            const work=await workModel.create({...data,city:user.city});
+            const work=await workModel.create(data);
             return work;
         } catch (error) {
             throw {error:'Something went wrong in the create work services'}

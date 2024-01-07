@@ -12,9 +12,11 @@ const bookingSchema=new mongoose.Schema({
         ref:'Work',
         required:true
     },
-    price:{
-        type:Number
-    }
+    workBookDetail:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Work',
+        required:true
+    }]
 })
 const booking=mongoose.model('Booking',bookingSchema);
 module.exports=booking
