@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react'
-
+import './Home.css'
 const AppliedJob = () => { 
     const [book,setBook]=useState([]);
     useEffect(()=>{
@@ -31,7 +31,7 @@ const AppliedJob = () => {
   return (
     <div className='container my-3'>
       
-          <table class="table table-hover">
+          <table className="table table-hover form-size1" >
   <thead>
     <tr>
       

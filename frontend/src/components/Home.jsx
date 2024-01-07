@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import HomeImage from '../images/home2.png'
-import Spiner from './Spiner'
 import './Home.css'
 import Footer from './Footer/Footer'
 const Home = () => {
@@ -20,7 +19,7 @@ const Home = () => {
 
     
      </div>
-    <div className="col"><img src={HomeImage} style={{width:'45rem',padding:'4rem',justifyContent:'center'}} alt="" /></div>
+    <div className="col "><img  className='col-img' src={HomeImage} style={{padding:'4rem',display:'flex',justifyContent:'center'}} alt="" /></div>
    
   </div>
   <Footer/>

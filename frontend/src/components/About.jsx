@@ -1,13 +1,14 @@
 import React from 'react'
 import image1 from '../images/about1.png'
 import Footer from './Footer/Footer'
+import './Home.css'
 const About = () => {
   return (
     
       <div className="container">
-  <div className="row">
-    <div className="col" style={{paddingTop:'6rem'}}>
-      <h2>About Us</h2>
+  <div className="row" style={{paddingTop:'2rem'}}>
+  <h1 className='text-center' style={{fontSize:'3.5rem'}}>About Us</h1>
+    <div className="col" style={{paddingTop:'2rem'}}>
       <p> Welcome to <span style={{color:'#5856d7',fontFamily:'sans-serif',fontSize:'1.5rem',fontWeight:'bold'}}> 
      Daily Wagers  </span>your go-to platform for seamless daily services availability! At Daily
       Wagers, we understand the significance of skilled labor in our daily lives. Whether you need 
@@ -23,7 +24,7 @@ const About = () => {
         that your service needs are met promptly and efficiently.
      </p> 
      </div>
-    <div className="col"><img src={image1} style={{width:'35rem',padding:'4rem',justifyContent:'center'}} alt="" /></div>
+    <div className="col"><img  className='col-img' src={image1} style={{padding:'0rem 4rem',justifyContent:'center'}} alt="" /></div>
    
   </div>
   <Footer/>

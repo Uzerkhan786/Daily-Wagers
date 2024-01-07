@@ -29,6 +29,26 @@
       width: 400px;
     }
   }
+.col-img{
+  width: 40rem;
+}
+  @media only screen and (max-width: 600px) {
+    .col-img {
+      width: 25rem;
+      padding:0px;
+      display:flex;
+      justify-content:left;
+      
+    }
+    .form-size{
+      width:25rem;
+      
+    }
+    .form-size1{
+      width:10rem;
+      
+    }
+  }
 
 
  

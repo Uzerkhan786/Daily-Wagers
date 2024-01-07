@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Footer from './Footer/Footer';
 import Spiner from './Spiner';
 import { useNavigate } from 'react-router-dom';
-
+import './Home.css'
 const CreateJob = () => {
   const navigate=useNavigate();
   const[isLogin,setIsLogin]=useState(false) 
@@ -59,7 +59,7 @@ const CreateJob = () => {
         <Spiner/>
         </div>
         ):(
-          <form onSubmit={formSubmit}>   
+          <form onSubmit={formSubmit} className='form-size'>   
           <div className="form-group my-3">
             <label htmlFor="name">Job Name</label>
             <input type="name" className="form-control" id="jobName" onChange={change} />
