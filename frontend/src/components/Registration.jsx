@@ -59,14 +59,6 @@ const Registration = () => {
     <label htmlFor="password">Password</label>
     <input type="password" className="form-control" id="password" onChange={change} placeholder="Password" autoComplete='off'/>
   </div>
-
-  <div className="form-group my-3">
-    <label htmlFor="password">Role</label>
-    <input type="name" className="form-control" id="role" onChange={change} placeholder="Role" autoComplete='off'/>
-  </div>
-
-
-
   <input  type="submit" className="form-control" value={'REGISTER'}
    style={{backgroundColor:'#5856d7',color:'white'}}/> 
    <div className='my-3 text-center'>
