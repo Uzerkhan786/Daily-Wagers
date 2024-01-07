@@ -15,7 +15,11 @@ const userSchema=new mongoose.Schema({
         type:String,
         enum:['ADMIN','CUSTOMER'],
         default:'CUSTOMER'
-     }
+     },
+     workBooking:[{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:'Work'
+     }]
 })
 const user=mongoose.model('User',userSchema);
 module.exports=user
