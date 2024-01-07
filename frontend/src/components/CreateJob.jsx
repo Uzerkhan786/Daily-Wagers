@@ -55,13 +55,14 @@ const CreateJob = () => {
       
        {!isLogin?(
         <div className='container' style={{width:'30rem',marginTop:'2rem'}}>
-          <h1 className='text-center' style={{fontWeight:'bold',color:'#5856d7',fontSize:'3 rem'}}>Create Work</h1>
+         
         {load?(
            <div style={{display:'flex',justifyContent:'center'}}>
         <Spiner/>
         </div>
-        ):(
-          <form onSubmit={formSubmit} className='form-size' >   
+        ):(  
+          <form onSubmit={formSubmit} className='form-size' >  
+           <h1 className='text-center' style={{fontWeight:'bold',color:'#5856d7',fontSize:'3.1rem'}}>Create Work</h1> 
           <div className="form-group my-3">
             <label htmlFor="name" >Job Name</label>
             <input type="name" className="form-control" id="jobName" onChange={change}  autoComplete='off'/>
