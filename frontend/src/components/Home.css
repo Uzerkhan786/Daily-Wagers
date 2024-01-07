@@ -1,0 +1,34 @@
+.heading {
+   
+    overflow: hidden;
+    white-space: nowrap;
+    animation: example 3s linear ;
+  }
+  
+  @keyframes example {
+    from {
+      width: 0;
+    }
+    to {
+      width: 400px;
+    }
+  }
+
+  .heading1 {
+   
+    overflow: hidden;
+    white-space: nowrap;
+    animation: example1 2s linear 2s infinite alternate ;
+  }
+  
+  @keyframes example1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 400px;
+    }
+  }
+
+
+ 
