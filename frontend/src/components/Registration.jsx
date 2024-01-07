@@ -49,17 +49,17 @@ const Registration = () => {
 
   <div className="form-group my-3">
     <label htmlFor="name">User Name</label>
-    <input type="name" className="form-control" id="name" onChange={change} placeholder="name"/>
+    <input type="name" className="form-control" id="name" onChange={change} placeholder="name" autoComplete='off'/>
   </div>
 
   <div className="form-group my-3">
     <label htmlFor="number">Mobile Number</label>
-    <input type="number" className="form-control" id="number" onChange={change} placeholder="Mobile Number"/>
+    <input type="number" className="form-control" id="number" onChange={change} placeholder="Mobile Number" autoComplete='off'/>
   </div>
 
   <div className="form-group my-3">
     <label htmlFor="password">Password</label>
-    <input type="password" className="form-control" id="password" onChange={change} placeholder="Password"/>
+    <input type="password" className="form-control" id="password" onChange={change} placeholder="Password" autoComplete='off'/>
   </div>
 
   <div className="form-group my-3">

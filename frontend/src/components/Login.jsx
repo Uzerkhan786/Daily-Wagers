@@ -53,12 +53,12 @@ const Login = () => {
   <form onSubmit={formSubmit}>
   <div className="form-group my-3">
     <label htmlFor="number">Mobile Number</label>
-    <input type="number" className="form-control" id="number" onChange={change} placeholder="Mobile Number"/>
+    <input type="number" className="form-control" id="number" onChange={change} placeholder="Mobile Number" autoComplete='off'/>
   </div>
 
   <div className="form-group my-3">
     <label html="password">Password</label>
-    <input type="password" className="form-control" onChange={change} id="password" placeholder="Password"/>
+    <input type="password" className="form-control" onChange={change} id="password" placeholder="Password" autoComplete='off'/>
   </div>
 
   <input  type="submit" className="form-control" value={'LOGIN'}

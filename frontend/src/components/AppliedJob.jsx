@@ -39,7 +39,6 @@ const AppliedJob = () => {
       <th scope="col">Job Name</th>
       <th scope="col">Job Type</th>
       <th scope="col">Price</th>
-      <th scope="col">Status</th>
      
     </tr>
   </thead>
@@ -51,7 +50,6 @@ const AppliedJob = () => {
       <td>{val.workBookDetail[0].workName}</td>
       <td>{val.workBookDetail[0].workType}</td>
       <td>{val.workBookDetail[0].salary} Rs/Day</td>
-      <td>{val.workBookDetail[0].status}</td>
      <td><button type='button' className=' btn btn-danger' style={{
      borderRadius:'10px'}} onClick={deleteBooking} value={val._id}>Delete</button></td> 
     </tr>

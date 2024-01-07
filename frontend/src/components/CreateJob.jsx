@@ -61,23 +61,23 @@ const CreateJob = () => {
         ):(
           <form onSubmit={formSubmit} className='form-size'>   
           <div className="form-group my-3">
-            <label htmlFor="name">Job Name</label>
-            <input type="name" className="form-control" id="jobName" onChange={change} />
+            <label htmlFor="name" >Job Name</label>
+            <input type="name" className="form-control" id="jobName" onChange={change}  autoComplete='off'/>
           </div> 
           <div className="form-group my-3">
             <label htmlFor="name">Job Type</label>
-            <input type="name" className="form-control" id="jobType" onChange={change} />
+            <input type="name" className="form-control" id="jobType" onChange={change}  autoComplete='off'/>
           </div>
         
           <div className="form-group my-3">
             <label htmlFor="number">Price</label>
-            <input type="number" className="form-control" id="price" onChange={change} />
+            <input type="number" className="form-control" id="price" onChange={change} autoComplete='off' />
           </div>
       
       
           <div className="form-group my-3">
             <label htmlFor="name">Description</label>
-            <input type="name" className="form-control" id="description" onChange={change} />
+            <input type="name" className="form-control" id="description" onChange={change}  autoComplete='off'/>
           </div>
       
           <div className="form-group my-3">
