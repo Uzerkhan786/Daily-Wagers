@@ -27,9 +27,8 @@ const Registration = () => {
       alert('User Already Exist')
       return console.log('User Already exist with this number')
     }
-    navigate('/Login');
     alert('Succesfully registered')
-    
+    navigate('/Login');
   }
   const formSubmit=(e)=>{
         e.preventDefault();
