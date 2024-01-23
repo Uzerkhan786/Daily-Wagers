@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Footer from './Footer/Footer';
-import Spiner from './Spiner';
+import Footer from '../Footer/Footer';
+import Spiner from '../Spiner';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'
+import '../Home.css'
 const CreateJob = () => {
   const navigate=useNavigate();
   const[isLogin,setIsLogin]=useState(false) 

@@ -1,28 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import Footer from './Footer/Footer'
-import { FaRupeeSign ,FaPhoneAlt} from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { BsCalendar2DateFill,BsPersonWorkspace, BsTypeH1 } from "react-icons/bs";
-import { MdOutlineEventAvailable } from "react-icons/md";
-import { FcBusinessman } from "react-icons/fc";
+import Footer from '../Footer/Footer';
+import {FaRupeeSign ,FaPhoneAlt,FaLocationDot,BsCalendar2DateFill,
+  BsPersonWorkspace ,MdOutlineEventAvailable,FcBusinessman} from '../../icons/Icons'
 import { useNavigate } from 'react-router-dom';
-import Spiner from './Spiner';
-import Alert from './Alert';
+import Spiner from '../Spiner';
+import SearchJob from './SearchJob';
 const ShowJobs = () => {
- const[da,setDa]=useState([]);
+ const[allJob,setAllJob]=useState([]);
  const[login,setLogin]=useState(false);
  const[loading,setLoading]=useState(false)
- const[show,setShow]=useState(false);
+ const[city,setCity]=useState();
  const navigate=useNavigate();
 
   useEffect(()=>{
    fetch(`https://daily-wager.onrender.com/api/v1/work`)
    .then(response=>response.json())
    .then(json=>{
-      setDa(da.concat(json.data));
+      setAllJob(allJob.concat(json.data));
       setLoading(true);
    })
   },[0])
+
+  const search=()=>{
+    let searchCity=allJob.filter(val=>(val.city===city ||val.workType===city));
+   
+    setAllJob(searchCity);
+    console.log(allJob);
+  }
+  const change=(e)=>{
+        setCity(e.target.value)    
+  }
+
+  //Till here there is code for the all shibs shown and search
 
   let b;
   const userBookWork=async()=>{
@@ -44,6 +53,7 @@ const ShowJobs = () => {
            const json=await response.json();
            console.log(json);
   }
+  
   const booked=(e)=>{
      const id=e.target.id;
      fetch(`https://daily-wager.onrender.com/api/v1/work/${id}`)
@@ -55,11 +65,10 @@ const ShowJobs = () => {
     alert('Booked Successfully')
     })
   }
-
   return (
-  
       <div>
-        
+        <SearchJob search={search} change={change} />
+      
     {!login?(
       <div  className='container' >  
       {!loading?(
@@ -69,7 +78,7 @@ const ShowJobs = () => {
       
     ):(
       <div className="row">
-            {da.map(val=>{
+            {allJob.map(val=>{
     return <div className="col-lg-3 col-md-12 my-3 d-flex justify-content-center" >
                {/* <Card  jobName={val.workName} jobType={val.workType} des={val.description} 
                location={val.city} exp={val.experience} status={val.available} mobile={val.mobile}
@@ -130,12 +139,9 @@ const ShowJobs = () => {
      </div>
     ):(
       navigate('/Login')
-    )}
-      
+    )}     
       </div>
     )
-    
-  
 }
 
 export default ShowJobs

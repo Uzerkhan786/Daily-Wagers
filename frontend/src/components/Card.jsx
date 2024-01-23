@@ -1,10 +1,7 @@
 import React from 'react'
 
-import { FaRupeeSign ,FaPhoneAlt} from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { BsCalendar2DateFill,BsPersonWorkspace } from "react-icons/bs";
-import { MdOutlineEventAvailable } from "react-icons/md";
-import { FcBusinessman } from "react-icons/fc";
+import {FaRupeeSign ,FaPhoneAlt,FaLocationDot,BsCalendar2DateFill,
+  BsPersonWorkspace ,MdOutlineEventAvailable,FcBusinessman} from "../icons/Icons"
 
 const Card = ({jobName,jobType,des,status,location,date,mobile,exp,price,Book}) => {
   

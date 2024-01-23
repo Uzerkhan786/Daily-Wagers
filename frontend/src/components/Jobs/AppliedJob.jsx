@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react'
-import './Home.css'
+import '../Home.css'
 const AppliedJob = () => { 
     const [book,setBook]=useState([]);
     useEffect(()=>{

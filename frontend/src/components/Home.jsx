@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HomeImage from '../images/home2.png'
 import './Home.css'
 import Footer from './Footer/Footer'
 const Home = () => {
  
-  const[loading,setLoading]=useState(false);
   return (
     <div className="container">
   <div className="row">

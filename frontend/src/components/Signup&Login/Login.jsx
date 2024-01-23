@@ -42,10 +42,8 @@ const Login = () => {
     e.preventDefault();
     setUser({...user,[e.target.id]:e.target.value})
   }
-
   return (
     <div>
-    
     <div style={{backgroundColor:'#5856d7',paddingTop:'4rem',paddingBottom:'12.5rem'}}>
     <div className='container' style={{width:'25rem',border:'2px solid white',borderRadius:'25px', backgroundColor:'white'}}>
       <div style={{padding:'2rem 2rem 5rem 2rem'}}>

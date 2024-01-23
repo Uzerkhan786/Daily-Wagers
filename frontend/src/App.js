@@ -1,10 +1,10 @@
-import Footer from './components/Footer/Footer';
-import{About,CreateJob,Home,Navbar} from './components/index'
-import Jobs from './components/ShowJobs'
-import Login from './components/Login';
-import Registration from './components/Registration';
+import{About, Home,Navbar} from './components/index'
+import {AppliedJob,CreateJob,ShowJobs} from './components/Jobs/Index'
+
+import {Login} from './components/Signup&Login/Index';
+import Registration from './components/Signup&Login/Registration';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import AppliedJob from './components/AppliedJob';
+
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
     <Navbar/>
     <Routes> 
     <Route path='/' element={<Home/>}/>
-      <Route path='/jobs' element={<Jobs/>}/>
+      <Route path='/jobs' element={<ShowJobs/>}/>
       <Route path='/createjob' element={<CreateJob/>}/>
       <Route path='appliedjob' element={<AppliedJob/>}/>
       <Route path='/about' element={<About/>}/>
