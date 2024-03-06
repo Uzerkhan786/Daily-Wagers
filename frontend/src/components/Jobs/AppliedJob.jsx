@@ -4,16 +4,17 @@ const AppliedJob = () => {
   const bookUser = JSON.parse(localStorage.getItem("userId"));
   const [book, setBook] = useState();
   useEffect(() => {
-    fetch(
-      `https://daily-wager.onrender.com/api/v1/book/?bookingUserId=${bookUser?.data?._id}`
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);
-        setBook(json.data);
-      });
+    bookUser &&
+      fetch(
+        `https://daily-wager.onrender.com/api/v1/book/?bookingUserId=${bookUser?.data?._id}`
+      )
+        .then((response) => response.json())
+        .then((json) => {
+          console.log(json);
+          setBook(json.data);
+        });
   }, []);
-  console.log(book);
+
   const deleteBooking = (e) => {
     const id = e.target.value;
     fetch(`https://daily-wager.onrender.com/api/v1/book/${id}`, {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { CiLogin } from "react-icons/ci";
 
@@ -6,7 +6,6 @@ import images from "../images/skillsync-connect-high-resolution-logo-white-trans
 const Navbar = ({ Home }) => {
   const navigate = useNavigate();
   const getUser = JSON.parse(localStorage.getItem("userId"));
-  console.log(getUser);
 
   const logout = () => {
     localStorage.removeItem("userId");
